@@ -30,10 +30,7 @@ public class Menu : IMenu
 
         private void UpdateManager()
         {
-            manager.MediaItems.Add(movie1);
-            manager.MediaItems.Add(movie2);
-            manager.MediaItems.Add(movie3);
-            manager.MediaItems.Add(show1);
+           
         }
 
         public Menu(IRepository writer)
@@ -60,7 +57,8 @@ public class Menu : IMenu
             Console.WriteLine("Make a selection\n");
             Console.WriteLine("1. Add new content");
             Console.WriteLine("2. See content");
-            Console.WriteLine("3. Exit\n");
+            Console.WriteLine("3. Search");
+            Console.WriteLine("4. Exit\n");
         }
         public void DisplayMenu()
         {
@@ -78,8 +76,12 @@ public class Menu : IMenu
                             Add();
                         } else if(menuSelection.Equals(2)){
                             PrintList();
-                        } else{System.Console.WriteLine("Invalid option!");}
-                    }while(!menuSelection.Equals(3));
+                        } 
+                        else if(menuSelection.Equals(3)){
+                            Search();
+                        }
+                        else{System.Console.WriteLine("Invalid option!");}
+                    }while(!menuSelection.Equals(4));
                     Console.WriteLine("Closing window....");
                     break;
                     case 2: 
@@ -132,6 +134,10 @@ public class Menu : IMenu
         }
         public void Search()
         {
+            manager.MediaItems.Add(movie1);
+            manager.MediaItems.Add(movie2);
+            manager.MediaItems.Add(movie3);
+            manager.MediaItems.Add(show1);
             Console.WriteLine("Enter a search term:");
             string searchTerm = Console.ReadLine();
             var searchResult = manager.MediaItems.Where(x=> x.Title == searchTerm);

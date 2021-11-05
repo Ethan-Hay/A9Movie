@@ -1,0 +1,42 @@
+[
+  {
+    "MovieID": 1,
+    "Title": "Avenger 1",
+    "Genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "MovieID": 2,
+    "Title": "Avenger 2",
+    "Genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "MovieID": 3,
+    "Title": "Avenger 3",
+    "Genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "MovieID": 4,
+    "Title": "www",
+    "Genres": [
+      "www",
+      "s"
+    ]
+  },
+  {
+    "MovieID": 5,
+    "Title": "sss",
+    "Genres": [
+      "sssss",
+      "ddddd"
+    ]
+  }
+]
